@@ -1,6 +1,52 @@
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Car, Cpu, Ticket, ArrowRight } from 'lucide-react';
+import { useEffect } from 'react';
 
 const Registration = () => {
+  gsap.registerPlugin(ScrollTrigger)
+
+  useEffect(() => {
+
+    gsap.fromTo(".car-event", {
+      x: -500,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "power1.inOut",
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".car-event",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true
+      }
+    })
+
+
+    gsap.fromTo(".tech-event", {
+      x: 500,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "power1.inOut",
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".car-event",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true
+      }
+    })
+
+  }, [])
+
+
+
   return (
     <div id="registration" className="min-h-screen bg-black py-20 relative overflow-hidden">
       {/* Animated gradient background */}
@@ -17,7 +63,7 @@ const Registration = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Car Event Card */}
-            <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-red-500 transition-all duration-300 group">
+            <div className="car-event bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-red-500 transition-all duration-300 group">
               <div className="w-16 h-16 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Car className="w-8 h-8 text-red-500" />
               </div>
@@ -28,13 +74,10 @@ const Registration = () => {
                 <li>• Performance workshops</li>
                 <li>• Professional racing talks</li>
               </ul>
-              <button className="w-full bg-red-500/10 border border-red-500/20 text-red-500 py-4 rounded-xl font-medium hover:bg-red-500/20 transition-all duration-300 group-hover:border-red-500/40">
-                Register Now
-              </button>
             </div>
 
             {/* Tech Event Card */}
-            <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 group">
+            <div className="tech-event bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 group">
               <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Cpu className="w-8 h-8 text-purple-500" />
               </div>
@@ -45,9 +88,6 @@ const Registration = () => {
                 <li>• Innovation hackathon</li>
                 <li>• Tech startup showcase</li>
               </ul>
-              <button className="w-full bg-purple-500/10 border border-purple-500/20 text-purple-500 py-4 rounded-xl font-medium hover:bg-purple-500/20 transition-all duration-300 group-hover:border-purple-500/40">
-                Register Now
-              </button>
             </div>
           </div>
 
