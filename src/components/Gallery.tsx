@@ -29,15 +29,15 @@ const Gallery = () => {
   ];
 
   return (
-    <div id="gallery" className="min-h-screen bg-black py-20">
+    <div id="gallery" className="min-h-screen bg-black py-12 sm:py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-16">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
             Gallery
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {images.map((image, index) => (
             <div
               key={index}
@@ -49,8 +49,8 @@ const Gallery = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-xl font-bold">{image.title}</h3>
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <h3 className="text-white text-lg sm:text-xl font-bold">{image.title}</h3>
                 </div>
               </div>
             </div>

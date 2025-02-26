@@ -1,15 +1,19 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
-import { Model } from './Model';
+import Model from './Model';
+import gsap from 'gsap';
+import HeroCamera from './HeroCamera';
 
 const CarScene = () => {
+  
+
   return (
-    <div id="car-section" className="h-screen w-full">
+    <div id="car-background" className="h-screen w-full">
       <Canvas shadows>
         <PerspectiveCamera makeDefault position={[3, 2, 5]} />
         <Environment preset="sunset" />
-        
+
         <ambientLight intensity={0.5} />
         <directionalLight
           position={[5, 5, 5]}
@@ -17,11 +21,13 @@ const CarScene = () => {
           castShadow
           shadow-mapSize={[1024, 1024]}
         />
-        
+
         <Suspense fallback={null}>
-          <Model />
+          <HeroCamera>
+            <Model scale={1.5} rotation={[0.1, 0, 0]} />
+          </HeroCamera>
         </Suspense>
-        
+
         <OrbitControls
           enableZoom={false}
           enablePan={false}

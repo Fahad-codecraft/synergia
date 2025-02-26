@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-// import { ChevronDown, Timer, Users, MapPin, Calendar } from 'lucide-react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Events from './components/Events';
@@ -8,7 +7,8 @@ import Gallery from './components/Gallery';
 import Sponsors from './components/Sponsors';
 import Contact from './components/Contact';
 import Lenis from 'lenis';
-import Car from './components/Car';
+import CarScene from './components/Car';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,16 +22,21 @@ function App() {
   })
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Hero />
-      <Car />
-      <About />
-      <Events />
-      <Registration />
-      {/* <Gallery /> */}
-      <Sponsors />
-      <Contact />
-    </div>
+    <>
+      {/* <div className='fixed h-full w-full inset-0 z-0'>
+        <CarScene />
+      </div> */}
+      <div className="min-h-screen bg-transparent text-white relative">
+        <Hero />
+        <About />
+        <Events />
+        <Registration />
+        {/* <Gallery /> */}
+        <Sponsors />
+        <Footer />
+      </div>
+    </>
+
   );
 }
 

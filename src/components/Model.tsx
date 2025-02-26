@@ -8,11 +8,12 @@ Title: Rb20
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { forwardRef } from 'react'
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF('/car.glb')
+const Model = forwardRef((props, ref) => {
+  const { nodes, materials } = useGLTF('/car.glb');
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={ref}>
       <group position={[0.187, 0.27, -0.046]} rotation={[Math.PI / 2, 0, 0]} scale={0.359}>
         <mesh
           castShadow
@@ -137,6 +138,8 @@ export function Model(props) {
       />
     </group>
   )
-}
+})
 
 useGLTF.preload('/car.glb')
+
+export default Model
