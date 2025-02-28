@@ -6,7 +6,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('/');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const location = useLocation();
 
   const navItems = [
@@ -19,15 +18,10 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -59,12 +53,6 @@ const Navbar = () => {
                 SYNERGIA
               </span>
             </span>
-            <div 
-              className="absolute -inset-x-6 -inset-y-3 bg-white/5 rounded-xl scale-0 group-hover:scale-100 transition-transform duration-500"
-              style={{
-                background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 100%)`
-              }}
-            ></div>
           </Link>
 
           {/* Desktop Navigation */}
