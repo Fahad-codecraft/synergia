@@ -1,6 +1,5 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Car, Cpu, Ticket, ArrowRight } from 'lucide-react';
 import { useEffect } from 'react';
 
 const Registration = () => {
@@ -65,7 +64,7 @@ const Registration = () => {
             {/* Car Event Card */}
             <div className="car-event bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-red-500 transition-all duration-300 group">
               <div className="w-16 h-16 bg-red-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Car className="w-8 h-8 text-red-500" />
+                {/* <Car className="w-8 h-8 text-red-500" /> */}
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Racing Events</h3>
               <ul className="space-y-3 text-gray-400 mb-8">
@@ -79,7 +78,7 @@ const Registration = () => {
             {/* Tech Event Card */}
             <div className="tech-event bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 hover:border-purple-500 transition-all duration-300 group">
               <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Cpu className="w-8 h-8 text-purple-500" />
+                {/* <Cpu className="w-8 h-8 text-purple-500" /> */}
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Tech Events</h3>
               <ul className="space-y-3 text-gray-400 mb-8">
@@ -95,7 +94,7 @@ const Registration = () => {
           <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-gray-800 mb-12">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-600 rounded-full flex items-center justify-center">
-                <Ticket className="w-6 h-6 text-white" />
+                {/* <Ticket className="w-6 h-6 text-white" /> */}
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Free Expo Access</h3>
@@ -108,7 +107,7 @@ const Registration = () => {
               className="inline-flex w-full items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-red-700 hover:to-purple-700 transition-all duration-300 group"
             >
               Register for Events
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              {/* <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> */}
             </a>
           </div>
 

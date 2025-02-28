@@ -35,7 +35,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <div id="sponsors" className="min-h-screen bg-black py-12 sm:py-20">
+    <section id="sponsors" className="min-h-screen bg-black py-12 sm:py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-16">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
@@ -62,7 +62,7 @@ const Sponsors = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

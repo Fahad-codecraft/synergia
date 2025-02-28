@@ -6,9 +6,19 @@ import Registration from '../components/Registration';
 import Sponsors from '../components/Sponsors';
 import Footer from '../components/Footer';
 import EventsPreview from '../components/EventsPreview';
+import Lenis from 'lenis';
 
 const HomePage = () => {
+  useEffect(() => {
+    const lenis = new Lenis()
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  }, [])
   const [loading, setLoading] = useState(true);
+
 
   // Function to handle loader completion
   const handleLoaderComplete = () => {

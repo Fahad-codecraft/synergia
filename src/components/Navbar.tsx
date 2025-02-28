@@ -54,7 +54,7 @@ const Navbar = () => {
             to="/" 
             className="relative group"
           >
-            <span className="text-3xl font-bold animate-glow relative z-10">
+            <span className="text-3xl font-bold animate-glow relative z-10 font-[AlphaCorsa]">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-red-600">
                 SYNERGIA
               </span>

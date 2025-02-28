@@ -3,10 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'DirtyLine36';
-  src: url('/fonts/Dirtyline36Daysoftype2022-Reg.woff2') format('woff2');
+  font-family: 'AlphaCorsa';
+  src: url('/fonts/Alphacorsa-Personal-Use-BF6593ee666a707.ttf');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'formula1';
+  src: url('/fonts/Formula1-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'formula1';
 }
 
 .para {

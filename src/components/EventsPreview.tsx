@@ -15,11 +15,13 @@ const EventsPreview = () => {
     gsap.fromTo(".event-pres1", 
       {
         x: -100,
+        rotate: -30,
         opacity: 0
       },
       {
         x: 0,
         opacity: 1,
+        rotate: 0,
         duration: 1.5,
         ease: "power4.out",
         stagger: 0.3,
@@ -54,11 +56,13 @@ const EventsPreview = () => {
     gsap.fromTo(".event-pres3", 
       {
         x: 100,
+        rotate: 30,
         opacity: 0
       },
       {
         x: 0,
         opacity: 1,
+        rotate: 0,
         duration: 1.5,
         ease: "power4.out",
         stagger: 0.3,
@@ -70,6 +74,17 @@ const EventsPreview = () => {
       }
     }
     );
+
+    gsap.to(".featuredText", {
+      x: 0,
+      duration: 0.5,
+      ease: "power1.Out",
+      scrollTrigger: {
+        trigger: ".texts",
+        start: "top 50%",
+        toggleActions: "play reverse play reverse",
+      }
+    });
 
   }, []);
 
@@ -83,10 +98,15 @@ const EventsPreview = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
-              Featured Events
+        <div className="text-center mb-16 texts">
+          <h2 className="featuredText text-5xl md:text-7xl lg:text-8xl font-[AlphaCorsa] font-bold mb-6 -translate-x-44">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
+              Featured {" "}
+            </span>
+            </h2>
+            <h2 className='featuredText text-5xl md:text-7xl lg:text-8xl font-[AlphaCorsa] font-bold mb-6 translate-x-44'>
+            <span className="text-transparent  font-[AlphaCorsa] bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
+            Events 
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
