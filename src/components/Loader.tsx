@@ -64,11 +64,11 @@ const Loader = ({ onComplete }: { onComplete: () => void }) => {
     >
       <div
         ref={leftDoorRef}
-        className="absolute left-0 w-1/2 h-full bg-gradient-to-r from-red-500 to-orange-500 transform-gpu"
+        className="absolute left-0 w-1/2 h-full bg-gradient-to-r from-[#0a111c] to-[#312e81] transform-gpu"
       />
       <div
         ref={rightDoorRef}
-        className="absolute right-0 w-1/2 h-full bg-gradient-to-r from-orange-500 to-red-500 transform-gpu"
+        className="absolute right-0 w-1/2 h-full bg-gradient-to-r from-[#312e81] to-[#0a111c] transform-gpu"
       />
       <svg
         ref={textRef}

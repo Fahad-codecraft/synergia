@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sparkles, Trophy } from 'lucide-react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('/');
   const location = useLocation();
 
   const navItems = [
     { name: 'Events', path: '/events', icon: Sparkles },
-    { name: 'Sponsors', path: '/#sponsors', icon: Trophy }
+    { name: 'Sponsors', path: '#sponsors', icon: Trophy }
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -32,11 +18,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'py-3 bg-black/60 backdrop-blur-md border-b border-white/10 shadow-lg shadow-purple-500/5' 
-          : 'py-5 bg-transparent'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-500 py-3 bg-black/60 backdrop-blur-md border-b border-white/10 shadow-lg shadow-purple-500/5`}
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-red-500/5 animate-gradient"></div>

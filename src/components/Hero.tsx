@@ -1,5 +1,4 @@
 import  { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   const targetDate = new Date('2025-03-08T09:00:00').getTime();
@@ -66,9 +65,9 @@ const Hero = () => {
         </div>
         <button
           onClick={scrollToNext}
-          className=" font-[AlphaCorsa] bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 mx-auto"
+          className="animate-bounce font-[AlphaCorsa] bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 mx-auto"
         >
-          Explore <ChevronDown size={20} />
+          Explore <img src="/icons/chevrondown.svg" className="w-5 h-5" />
         </button>
       </div>
     </div>

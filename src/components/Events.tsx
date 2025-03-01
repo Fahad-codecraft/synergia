@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Car, Cpu, Bot, Rocket } from 'lucide-react';
 import EventPopup from './EventPopup';
 
 const Events = () => {
@@ -7,52 +6,68 @@ const Events = () => {
 
   const events = [
     {
-      icon: Car,
-      title: "Racing Simulator",
+      icon: '/icons/hammer.svg',
+      title: "Bid To Build",
       description: "Experience professional racing simulators with force feedback and real-time telemetry data. Get behind the wheel of Formula 1, GT, and Rally cars.",
-      date: "March 15, 2024",
+      date: "March 7, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Main Exhibition Hall",
       capacity: "50 participants per session",
-      image: "https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?auto=format&fit=crop&w=800&q=80"
+      link: "https://forms.gle/za8DMAHRAuMjezwp9",
+      image: "/posters/Bid to Build.webp"
     },
     {
-      icon: Cpu,
-      title: "Tech Exhibition",
+      icon: '/icons/dices.svg',
+      title: "Squid Games",
       description: "Explore cutting-edge automotive technology, from electric powertrains to autonomous driving systems. Meet industry leaders and innovators.",
-      date: "March 16, 2024",
+      date: "March 7, 2025",
       time: "9:00 AM - 5:00 PM",
       location: "Innovation Center",
       capacity: "200 visitors",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+      link: "https://forms.gle/p8WM31VkYip14Mqx5",
+      image: "/posters/Squid game.webp"
     },
     {
-      icon: Bot,
-      title: "Robotics Race",
+      icon: '/icons/clock11.svg',
+      title: "Minute to Win",
       description: "Watch autonomous robots compete on our custom-designed track. Witness the future of racing where AI meets speed.",
-      date: "March 17, 2024",
+      date: "March 7, 2025",
       time: "11:00 AM - 4:00 PM",
       location: "Robotics Arena",
       capacity: "150 spectators",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSd1pGSuDBf3UkT97nGjwcg6n8FHW2M3ld7tKVCISAYDbzscqQ/viewform?usp=header",
+      image: "/posters/Minute to win.webp"
     },
     {
-      icon: Rocket,
-      title: "Speed Engineering",
+      icon: '/icons/rocket.svg',
+      title: "Start it Up",
       description: "Deep dive into aerodynamics and vehicle optimization. Learn from top engineers about the science of speed.",
-      date: "March 18, 2024",
+      date: "March 7, 2025",
       time: "10:00 AM - 3:00 PM",
       location: "Engineering Workshop",
       capacity: "75 participants",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScJKJkjSGd-KW0ouA0gsOYaeHNZByvUtWRQwDkP4NYC1U1f-Q/viewform?usp=sharing",
+      image: "/posters/start it up.webp"
+    },
+    {
+      icon: "/icons/swords.svg",
+      title: "Diplomat",
+      description: "Deep dive into aerodynamics and vehicle optimization. Learn from top engineers about the science of speed.",
+      date: "March 7, 2025",
+      time: "10:00 AM - 3:00 PM",
+      location: "Engineering Workshop",
+      capacity: "75 participants",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSdMyc3KpHs9hu9-Wh6xLnUj8Gge0v4lYOlBD8vSg0f-Z3Onwg/viewform?usp=header",
+      image: "/posters/diplomat.webp"
     }
+
   ];
 
   return (
     <div id="events" className="min-h-screen bg-black py-12 sm:py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 sm:mb-16">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
+          <span className="text-transparent font-[Alphacorsa] bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
             Events & Expos
           </span>
         </h2>
@@ -78,7 +93,9 @@ const Events = () => {
               <div className="relative h-full p-4 sm:p-6 lg:p-8 flex flex-col">
                 {/* Top Section */}
                 <div className="flex items-center justify-between mb-2">
-                  <event.icon className="w-8 h-8 sm:w-10 sm:h-10 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="w-16 h-16 rounded-xl bg-red-500/20 flex items-center justify-center mb-4">
+                    <img src={event.icon} className="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
                   <span className="text-xs sm:text-sm text-gray-400 bg-black/50 px-3 py-1 sm:px-4 sm:py-2 rounded-full">
                     {event.date}
                   </span>
@@ -96,7 +113,7 @@ const Events = () => {
                   <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-6 sm:mb-8">
                     {event.description.split('.')[0] + '.'}
                   </p>
-                  
+
                   <button
                     onClick={() => setSelectedEvent(event)}
                     className="w-full bg-red-500/10 border border-red-500/20 text-red-500 py-3 sm:py-4 rounded-lg font-medium hover:bg-red-500/20 transition-all duration-300 group-hover:border-red-500/40 text-sm sm:text-base"
