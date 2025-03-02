@@ -96,7 +96,7 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className='flex flex-col mx-4 md:mx-12 lg:mx-24 head'>
+        {/* <div className='flex flex-col mx-4 md:mx-12 lg:mx-24 head'>
           <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center lg:text-left lg:flex lg:flex-start ml-2 -translate-x-10 head1">
             <span className="font-[AlphaCorsa] text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
               About
@@ -107,10 +107,10 @@ const About = () => {
               Synergia
             </span>
           </h2>
-        </div>
+        </div> */}
 
         <div className="flex flex-col gap-8 lg:gap-12 font-[AlphaCorsa] items-center">
-          <div className="space-y-4 lg:space-y-6 max-w-5xl font-[formula1] para translate-y-8 opacity-0 px-4">
+          {/* <div className="space-y-4 lg:space-y-6 max-w-5xl font-[formula1] para translate-y-8 opacity-0 px-4">
             <p className="text-base md:text-lg text-gray-300 leading-relaxed">
               Synergia is where the thunderous roar of motorsports meets cutting-edge technology.
               Born from the passion for speed and innovation, we bring together the brightest minds
@@ -121,7 +121,7 @@ const About = () => {
               hands-on workshops, and thrilling competitions that push the boundaries of
               what's possible.
             </p>
-          </div>
+          </div> */}
 
           <div className="cards grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 px-4 w-full max-w-7xl">
             <div className="card-left transform md:-translate-y-8">

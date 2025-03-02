@@ -64,7 +64,7 @@ const Registration = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto texts">
           <div className='text-center'>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-[AlphaCorsa]  font-bold mb-6">
+            <h2 className="text-4xl md:text-7xl lg:text-8xl font-[AlphaCorsa]  font-bold mb-6">
               <span className="head1 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">
                 Experience{" "}
               </span>
@@ -130,10 +130,10 @@ const Registration = () => {
           <div className="grid grid-cols-3 gap-6 text-center">
             <div className="p-4">
               <p className="text-2xl font-bold text-red-500 mb-2">2 Days</p>
-              <p className="text-gray-400">Of Innovation</p>
+              <p className="text-gray-400">Of Fun</p>
             </div>
             <div className="p-4">
-              <p className="text-2xl font-bold text-purple-500 mb-2">4</p>
+              <p className="text-2xl font-bold text-purple-500 mb-2">5</p>
               <p className="text-gray-400">Events</p>
             </div>
             <div className="p-4">

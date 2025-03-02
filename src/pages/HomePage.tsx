@@ -32,8 +32,8 @@ const HomePage = () => {
       ) : (
         <>
           <Hero />
-          <About />
           <EventsPreview />
+          <About />
           <Registration />
           {/* <Sponsors /> */}
           <Footer />
