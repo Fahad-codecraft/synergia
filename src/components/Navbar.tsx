@@ -21,7 +21,6 @@ const Navbar = () => {
       className={`fixed w-full z-50 transition-all duration-500 py-3 bg-black/60 backdrop-blur-md border-b border-white/10 shadow-lg shadow-purple-500/5`}
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-red-500/5 animate-gradient"></div>
 
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
@@ -40,9 +39,9 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className="relative group px-6 py-2"
                 onMouseEnter={() => setActiveItem(item.path)}
                 onMouseLeave={() => setActiveItem(location.pathname)}
@@ -63,7 +62,7 @@ const Navbar = () => {
                 {/* Bottom line */}
                 <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-red-500 to-purple-500 transition-all duration-300 ${activeItem === item.path ? 'w-full opacity-100' : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
                   }`}></div>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -82,20 +81,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ${isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        <div className={`md:hidden overflow-hidden transition-all duration-500 ${isMenuOpen ? 'max-h-[400px] opacity-100' : 'hidden opacity-0'
           }`}>
           <div className="py-4 space-y-2">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${activeItem === item.path
                     ? 'bg-gradient-to-r from-red-500/20 to-purple-500/20 text-white'
                     : 'text-gray-400 hover:bg-white/5'
                   }`}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import EventPopup from './EventPopup';
+import ReactMarkdown from 'react-markdown';
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
@@ -8,7 +9,16 @@ const Events = () => {
     {
       icon: '/icons/hammer.svg',
       title: "Bid To Build",
-      description: "Experience professional racing simulators with force feedback and real-time telemetry data. Get behind the wheel of Formula 1, GT, and Rally cars.",
+      description: `Compete in a creative test of skill and strategy across three exciting rounds:
+
+🔹 **Round 1**: Aptitude Test - Answer MCQs (+1 for correct, -1 for incorrect).
+
+🔹 **Round 2** : Bidding for Boxes - Use virtual funds to bid for mystery component boxes. No exceeding funds or trading allowed.
+
+🔹 **Round 3** : Show Your Creativity - Build a decorative item using acquired components. Judged on creativity, functionality, aesthetics, and effective use of materials.
+
+
+🚨 Disqualification for: Rule violations, cheating, unsportsmanlike conduct, or negligence.`,
       date: "March 7, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Main Exhibition Hall",
@@ -19,7 +29,17 @@ const Events = () => {
     {
       icon: '/icons/dices.svg',
       title: "Squid Games",
-      description: "Explore cutting-edge automotive technology, from electric powertrains to autonomous driving systems. Meet industry leaders and innovators.",
+      description: `Compete in a thrilling survival-style event with three intense rounds:
+
+🔹 Mingle - Form groups within 30 seconds and find the right box to survive.
+
+🔹 Red Light, Green Light - Move on "Green Light," freeze on "Red Light," or face elimination.
+
+🔹 Dalgona Challenge - Carefully carve out a shape from dalgona candy without breaking it.
+
+📅 Date: 7th March 2025
+📍 Venue: PCCOE Lawn
+🏆 Prize Pool: ₹5000`,
       date: "March 7, 2025",
       time: "9:00 AM - 5:00 PM",
       location: "Innovation Center",
@@ -30,7 +50,14 @@ const Events = () => {
     {
       icon: '/icons/clock11.svg',
       title: "Minute to Win",
-      description: "Watch autonomous robots compete on our custom-designed track. Witness the future of racing where AI meets speed.",
+      description: `**🏆 Minute to Win It The Ultimate 60-Second Challenge! ⏳**  
+
+Brace yourself for a high-energy competition where skill, speed, and strategy collide! In **Minute to Win It**, participants will take on thrilling 60-second challenges, pushing their abilities to the limit.  
+
+With three intense rounds, only the best will make it to the *Ultimate Showdown* and claim victory. Do you have what it takes to **win it in a minute?** 💪  
+
+🎁 **PRIZE POOL: 3K** - Bring your A-game and take home the glory! 🎉`,
+
       date: "March 7, 2025",
       time: "11:00 AM - 4:00 PM",
       location: "Robotics Arena",
@@ -41,7 +68,10 @@ const Events = () => {
     {
       icon: '/icons/rocket.svg',
       title: "Start it Up",
-      description: "Deep dive into aerodynamics and vehicle optimization. Learn from top engineers about the science of speed.",
+      description: `Start It Up - Business Strategy Competition 🚀
+
+Start It Up is an exciting business strategy event where teams tackle real-world challenges and develop innovative solutions. Participants will navigate through three competitive rounds: crafting a business proposal, presenting to a panel, and building a Minimum Viable Product (MVP) with a provided budget. The best strategists will claim victory and exciting prizes! Are you ready to innovate and dominate? 💡🔥
+`,
       date: "March 7, 2025",
       time: "10:00 AM - 3:00 PM",
       location: "Engineering Workshop",
@@ -52,7 +82,14 @@ const Events = () => {
     {
       icon: "/icons/swords.svg",
       title: "Diplomat",
-      description: "Deep dive into aerodynamics and vehicle optimization. Learn from top engineers about the science of speed.",
+      description: `Diplomat is a competitive event where students step into the role of diplomats, tackling global issues through knowledge, debate, and negotiation.
+
+Round 1: General Knowledge & Current Affairs Quiz - Tests participants' awareness of international relations, treaties, and global events.
+
+Round 2: Diplomatic Debate & Conflict Resolution - Teams represent different countries, negotiate alliances, and resolve geopolitical conflicts through diplomacy.
+
+
+The event fosters critical thinking, negotiation skills, and strategic decision-making, preparing participants for real-world global leadership.`,
       date: "March 7, 2025",
       time: "10:00 AM - 3:00 PM",
       location: "Engineering Workshop",
@@ -111,7 +148,9 @@ const Events = () => {
                 {/* Bottom Section */}
                 <div className="mt-auto">
                   <p className="text-sm sm:text-base text-gray-400 leading-relaxed mb-6 sm:mb-8">
-                    {event.description.split('.')[0] + '.'}
+                    <ReactMarkdown>
+                      {event.description.split('.')[0] + '.'}
+                    </ReactMarkdown>
                   </p>
 
                   <button

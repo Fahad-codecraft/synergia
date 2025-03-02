@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const EventsPreview = () => {
-  const navigate = useNavigate();
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -176,13 +175,13 @@ const EventsPreview = () => {
         </div>
 
         <div className="text-center">
-          <button
-            onClick={() => navigate('/events')}
+          <a
+            href='/events'
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-300"
           >
             View All Events
             <img src="/icons/arrow-right.svg" className='w-5 h-5 group-hover:translate-x-2 transition-transform duration-300'/>
-          </button>
+          </a>
         </div>
       </div>
     </div>
