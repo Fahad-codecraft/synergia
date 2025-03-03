@@ -115,9 +115,10 @@ const EventsPreview = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Racing Simulator */}
           <div className="event-pres1 group relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden hover:scale-105 transition-all duration-500 ">
+            <a href='/events'>
             <div className="absolute inset-0 ">
               <img
-                src="/posters/Bid to Build.webp"
+                src="/posters/bmw.webp"
                 alt="Racing Simulator"
                 className="w-full h-full object-cover opacity-30 group-hover:opacity-70 transition-opacity duration-500 -translate-y-10"
               />
@@ -126,15 +127,25 @@ const EventsPreview = () => {
 
             <div className="relative p-6 flex flex-col h-full w-full min-w-[397px] min-h-[561px]">
               <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mb-4">
-                <img src='/icons/hammer.svg' className='w-6 h-6' />
+                <img src='/icons/car.svg' className='w-6 h-6' />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">Bid To Build</h3>
-              <p className="text-gray-400 mb-6">Bid. Build. Bedazzle! Unbox creativity, outsmart the odds, and craft your way to victory!</p>
+              <h3 className="text-2xl font-bold text-white mb-3">Auto Expo</h3>
+              <p className="text-gray-400 mb-6">
+              <ul className="space-y-3 text-gray-400 mb-8">
+                <li>• Supercars Showcase</li>
+                <li>• Tuned Cars & Custom Builds</li>
+                <li>• Performance & Technology</li>
+                <li>• The Art of Tuning</li>
+              </ul>
+              Register for any event and get complimentary passes to expos
+              </p>
             </div>
+            </a>
           </div>
 
           {/* Robotics Race */}
           <div className=" event-pres2 group relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden hover:scale-105 transition-all duration-500">
+          <a href='/events'>
             <div className="absolute inset-0">
               <img
                 src="/posters/Squid game.webp"
@@ -151,10 +162,12 @@ const EventsPreview = () => {
               <h3 className="text-2xl font-bold text-white mb-3">Squid Games</h3>
               <p className="text-gray-400 mb-6">Survive the Games, Claim the Prize—Only the Sharpest Make It Out Alive!</p>
             </div>
+            </a>
           </div>
 
           {/* Tech Exhibition */}
           <div className="event-pres3 group relative bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden hover:scale-105 transition-all duration-500">
+          <a href='/events'>
             <div className="absolute inset-0 ">
               <img
                 src="/posters/diplomat.webp"
@@ -171,6 +184,7 @@ const EventsPreview = () => {
               <h3 className="text-2xl font-bold text-white mb-3">Diplomat</h3>
               <p className="text-gray-400 mb-6">Master diplomacy, navigate conflicts, and lead the world!</p>
             </div>
+            </a>
           </div>
         </div>
 

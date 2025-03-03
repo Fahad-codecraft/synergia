@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Events', path: '/events' },
-    { name: 'Sponsors', path: '#sponsors' }
+    // { name: 'Sponsors', path: '#sponsors' }
   ];
 
   useEffect(() => {

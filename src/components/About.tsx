@@ -11,10 +11,12 @@ const About = () => {
         card as gsap.TweenTarget,
         {
           x: -400,
+          rotate: -30,
           opacity: 0,
         },
         {
           x: 0,
+          rotate:1,
           opacity: 1,
           duration: 1.5,
           ease: 'power2.out',
