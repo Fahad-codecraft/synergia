@@ -115,6 +115,7 @@ The event fosters critical thinking, negotiation skills, and strategic decision-
           {events.map((event, index) => (
             <div
               key={index}
+              onClick={() => setSelectedEvent(event)}
               className="group relative w-full bg-gradient-to-br from-gray-900 to-black rounded-xl border border-gray-800 hover:border-red-500 transition-all duration-300 overflow-hidden"
               style={{ aspectRatio: '1/1.2' }}
             >
