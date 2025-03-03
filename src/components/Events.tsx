@@ -52,7 +52,7 @@ const Events = () => {
       title: "Minute to Win",
       description: `**🏆 Minute to Win It The Ultimate 60-Second Challenge! ⏳**  
 
-Brace yourself for a high-energy competition where skill, speed, and strategy collide! 
+Brace yourself for a high-energy competition where skill, speed, and strategy collide.
 
 In **Minute to Win It**, participants will take on thrilling 60-second challenges, pushing their abilities to the limit.  
 
