@@ -126,7 +126,7 @@ const About = () => {
           <div className="cards grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 px-4 w-full max-w-7xl">
             <div className="card-left transform md:-translate-y-8">
               <div className="bg-gradient-to-br w-full h-[200px] md:h-[250px] lg:h-[300px] from-gray-900 to-black p-6 rounded-xl border border-gray-800 hover:border-red-500 transition-all duration-300">
-                <h3 className="text-4xl md:text-5xl font-bold text-red-500 mb-2">4</h3>
+                <h3 className="text-4xl md:text-5xl font-bold text-red-500 mb-2">5</h3>
                 <p className="text-lg md:text-xl text-white">Events</p>
               </div>
             </div>
