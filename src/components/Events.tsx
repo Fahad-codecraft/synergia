@@ -42,7 +42,7 @@ const Events = () => {
 📅 Date: 8th March 2025
 📍 Venue: PCCOE Lawn
 🏆 Prize Pool: ₹5000`,
-      date: "March 7, 2025",
+      date: "March 8, 2025",
       time: "9:00 AM - 5:00 PM",
       location: "PCCoE Lawn",
       capacity: "200 visitors",
