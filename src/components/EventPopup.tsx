@@ -143,6 +143,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ event, onClose }) => {
                         </p>
 
                         <Link
+                        target='_blank'
                             to={event.link}
                             className="w-full p-4 bg-gradient-to-r from-red-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-colors block text-center"
                         >

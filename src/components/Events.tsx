@@ -25,7 +25,7 @@ const Events = () => {
       time: "10:00 AM - 6:00 PM",
       location: "Mechanical Classroom",
       capacity: "50 participants per session",
-      link: "https://forms.gle/za8DMAHRAuMjezwp9",
+      link: "https://linktr.ee/BidToBuild",
       image: "/posters/Bid to Build.webp"
     },
     {
@@ -46,7 +46,7 @@ const Events = () => {
       time: "9:00 AM - 5:00 PM",
       location: "PCCoE Lawn",
       capacity: "200 visitors",
-      link: "https://forms.gle/p8WM31VkYip14Mqx5",
+      link: "https://linktr.ee/SynergiaSquidGame",
       image: "/posters/Squid game.webp"
     },
     {
@@ -66,7 +66,7 @@ With three intense rounds, only the best will make it to the *Ultimate Showdown*
       time: "11:00 AM - 4:00 PM",
       location: "Classroom",
       capacity: "150 spectators",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSd1pGSuDBf3UkT97nGjwcg6n8FHW2M3ld7tKVCISAYDbzscqQ/viewform?usp=header",
+      link: "https://linktr.ee/SYNERGIAMINUTETOWINIT",
       image: "/posters/Minute to win.webp"
     },
     {
@@ -80,7 +80,7 @@ Start It Up is an exciting business strategy event where teams tackle real-world
       time: "10:00 AM - 3:00 PM",
       location: "Classroom",
       capacity: "75 participants",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScJKJkjSGd-KW0ouA0gsOYaeHNZByvUtWRQwDkP4NYC1U1f-Q/viewform?usp=sharing",
+      link: "https://linktr.ee/SYNERGIASTARTITUP",
       image: "/posters/start it up.webp"
     },
     {
@@ -98,7 +98,7 @@ The event fosters critical thinking, negotiation skills, and strategic decision-
       time: "10:00 AM - 3:00 PM",
       location: "Drawing Hall Mechanical",
       capacity: "75 participants",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSdMyc3KpHs9hu9-Wh6xLnUj8Gge0v4lYOlBD8vSg0f-Z3Onwg/viewform?usp=header",
+      link: "https://linktr.ee/SYNERGIADiplomat",
       image: "/posters/diplomat.webp"
     }
 
